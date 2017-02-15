@@ -25,6 +25,20 @@ namespace CITests
             Assert.AreEqual("item1", a.Name);
         }
 
+        [TestMethod]
+        public void TestUserSearch()
+        {
+            var a = _service.GetItemByUser("Luke");
+            Assert.IsTrue(a.Count == 4);
+        }
+
+        [TestMethod]
+        public void TestOwnerSearch()
+        {
+            var a = _service.GetItemByOwner("Ops");
+            Assert.IsTrue(a.Count == 3);
+        }
+
         public ServiceTests()
         {
             _service = new CIService();

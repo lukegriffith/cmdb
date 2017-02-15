@@ -50,7 +50,7 @@ namespace ConfigItems
                    new ConfigItem{Name="item1",Category="catA",User="Luke",Owner="Ops"},
                    new ConfigItem{Name="item2",Category="catA",User="Luke",Owner="Ops"},
                    new ConfigItem{Name="item3",Category="catB",User="Luke",Owner="Ops"},
-                   new ConfigItem{Name="item4",Category="catB",User="Luke",Owner="Ops"}
+                   new ConfigItem{Name="item4",Category="catB",User="Luke",Owner="ServiceDesk"}
                }
             );
 
