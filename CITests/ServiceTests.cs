@@ -1,7 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConfigItems;
 using System.Collections.Generic;
+using ConfigItems;
+using ConfigItems.Models;
 
 
 namespace CITests
@@ -21,22 +22,37 @@ namespace CITests
         [TestMethod]
         public void TestNameSearch()
         {
-            var a = _service.GetItem("item1");
-            Assert.AreEqual("item1", a.Name);
+            var items = _service.GetItem("item1");
+            Assert.AreEqual("item1", items.Name);
         }
 
         [TestMethod]
         public void TestUserSearch()
         {
-            var a = _service.GetItemByUser("Luke");
-            Assert.IsTrue(a.Count == 4);
+            var items = _service.GetItemByUser("Luke");
+            Assert.IsTrue(items.Count == 4);
         }
 
         [TestMethod]
         public void TestOwnerSearch()
         {
-            var a = _service.GetItemByOwner("Ops");
-            Assert.IsTrue(a.Count == 3);
+            var items = _service.GetItemByOwner("Ops");
+            Assert.IsTrue(items.Count == 3);
+        }
+
+
+        [TestMethod]
+        public void TestAdd()
+        {
+            ConfigItem newItem = new ConfigItem { Name = "TestItem" };
+
+            int BeforeCount = _service.GetItem().Count;
+
+            _service.AddItem(newItem);
+
+            int AfterCount = _service.GetItem().Count;
+
+            Assert.IsTrue(BeforeCount < AfterCount && AfterCount < (BeforeCount + 2));
         }
 
         public ServiceTests()

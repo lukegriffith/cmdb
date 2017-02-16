@@ -17,5 +17,11 @@ namespace ConfigItems
         List<ConfigItem> GetItemByOwner(string Owner);
 
         List<ConfigItem> GetItemByUser(string User);
+
+        void AddItem(ConfigItem item);
+
+        void DeleteItem(ConfigItem item);
+
+        void ModifyItem(ConfigItem item);
     }
 }

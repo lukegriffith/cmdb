@@ -38,6 +38,22 @@ namespace ConfigItems
         }
 
 
+        public void AddItem(ConfigItem item)
+        {
+            _dataContext.Add(item);
+        }
+
+        public void DeleteItem(ConfigItem item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ModifyItem(ConfigItem item)
+        {
+            throw new NotImplementedException();
+        }
+
+
         public CIService()
         {
 
