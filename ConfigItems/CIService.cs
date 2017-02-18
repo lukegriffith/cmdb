@@ -11,7 +11,7 @@ namespace ConfigItems
         private List<ConfigItem> _dataContext { get; set; }
 
 
-        public ConfigItem GetItem(string Name)
+        public ConfigItem GetItem(String Name)
         {
             return _dataContext.Where(i => i.Name == Name).First();
         }
@@ -21,17 +21,17 @@ namespace ConfigItems
             return _dataContext;
         }
 
-        public List<ConfigItem> GetItemByCategory(string Category)
+        public List<ConfigItem> GetItemByCategory(String Category)
         {
             return _dataContext.Where(i => i.Category == Category).ToList();
         }
 
-        public List<ConfigItem> GetItemByOwner(string Owner)
+        public List<ConfigItem> GetItemByOwner(String Owner)
         {
             return _dataContext.Where(i => i.Owner == Owner).ToList();
         }
 
-        public List<ConfigItem> GetItemByUser(string User)
+        public List<ConfigItem> GetItemByUser(String User)
         {
             return _dataContext.Where(i => i.User == User).ToList();
         }
