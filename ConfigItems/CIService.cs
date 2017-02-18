@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using ConfigItems.Models;
 using System.Linq; 
 
 namespace ConfigItems
 {
-    public class CIService : ICSService
+    public class CIService : ICIService
     {
 
         private List<ConfigItem> _dataContext { get; set; }

@@ -5,7 +5,7 @@ using ConfigItems.Models;
 
 namespace ConfigItems
 {
-    interface ICSService
+    interface ICIService
     {
         
         ConfigItem GetItem(string Name);

@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using ConfigItems;
 using ConfigItems.Models;
 
@@ -52,7 +51,7 @@ namespace CITests
 
             int AfterCount = _service.GetItem().Count;
 
-            Assert.IsTrue(BeforeCount < AfterCount && AfterCount < (BeforeCount + 2));
+            Assert.IsTrue(AfterCount == BeforeCount + 1);
         }
 
         public ServiceTests()
